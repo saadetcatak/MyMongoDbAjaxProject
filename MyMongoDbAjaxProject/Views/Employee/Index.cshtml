@@ -168,22 +168,22 @@
     $("#btnemployeeupdate").click(function () {
         let values = {
             EmployeeID: $("#txtidedit").val(),
-            EmployeeID: $("#txtnameedit").val(),
-            EmployeeID: $("#txtsurnameedit").val(),
-            EmployeeID: $("#txtsalaryedit").val()
-
+            EmployeeName: $("#txtnameedit").val(),
+            EmployeeSurname: $("#txtsurnameedit").val(),
+            EmployeeSalary: $("#txtsalaryedit").val()
         };
         $.ajax({
             url: "/Employee/UpdateEmployee/",
             type: "post",
             data: values,
             success: function (funk5) {
-            swal("Personel Başarıyla Silindi");
+                swal("Güncelleme Başarıyla Yapıldı");
             }
-
         });
     });
 
 </script>
 
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+
